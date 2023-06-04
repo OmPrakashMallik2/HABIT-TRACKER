@@ -4,10 +4,16 @@
     top: 0;
 }
 .nav .nav-item .nav-link {
+    padding: 10px;
     color: black;
     font-weight: bold;
 }
 .nav .nav-item .nav-link:active,
 .nav .nav-item .nav-link:hover {
-    color: blue;
+    /* border: 2px solid black; */
+    color: wheat;
+    background-color: rgb(55, 55, 55);
+    border-radius: 20px;
+    /* color: blue; */
+    text-underline-offset: 2px;
 }

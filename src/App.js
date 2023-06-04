@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/footer" element={<Footer/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Nav() {
   return (
     <div class='Nav'>
       <div class="container p-4">
-        <ul class="nav nav-underline">
+        <ul class="nav nav-fill p-2">
           <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/">Home</Link>
           </li>
