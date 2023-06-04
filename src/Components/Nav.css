@@ -1,5 +1,13 @@
 .Nav {
-    background-color: grey;
+    background-color: whitesmoke;
     position: sticky;
     top: 0;
+}
+.nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+}
+.nav .nav-item .nav-link:active,
+.nav .nav-item .nav-link:hover {
+    color: blue;
 }

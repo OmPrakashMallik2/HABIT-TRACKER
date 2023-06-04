@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>
+    <div class="container p-5">
       <h3> Footer</h3>
     </div>
   )
