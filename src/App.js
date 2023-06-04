@@ -7,11 +7,10 @@ import Nav from './Components/Nav';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Nav />
-      <h1>i AM GOING TO CREATE A CAR WEBSITE 🚗</h1>
+      <Header/>
+      <Nav/>
       <Home/>
-      <Footer /> 
+      <Footer/> 
     </div>
   );
 }
