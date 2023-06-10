@@ -1,19 +1,19 @@
 .Nav {
-    background-color: whitesmoke;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
     position: sticky;
     top: 0;
-}
-.nav .nav-item .nav-link {
-    padding: 10px;
-    color: black;
-    font-weight: bold;
-}
-.nav .nav-item .nav-link:active,
-.nav .nav-item .nav-link:hover {
-    /* border: 2px solid black; */
-    color: wheat;
-    background-color: rgb(55, 55, 55);
-    border-radius: 20px;
-    /* color: blue; */
-    text-underline-offset: 2px;
-}
+  }
+  
+  .Nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .Nav li {
+    margin-right: 10px;
+  }
+  
