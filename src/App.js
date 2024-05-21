@@ -1,21 +1,28 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Home from './Components/Home';
-import Nav from './Components/Navv';
+// App.js
+import React, { useEffect, useState } from 'react';
+import { collection, onSnapshot } from 'firebase/firestore';
+import CalendarView from './components/CalendarView';
+import HabitForm from './components/HabitForm'
+import HabitList from './components/HabitList'
+import { db } from './config/firebase';
 
 function App() {
+  const [habits, setHabits] = useState([]);
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, 'habits'), (snapshot) => {
+      setHabits(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
-    <div className="App">
-      <Header/>
-      <Nav/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/footer" element={<Footer/>}/>
-      </Routes>
-      <Footer/>
+    <div>
+      <h1>Habit Tracker</h1>
+      <HabitForm />
+      <HabitList habits={habits} />
+      <CalendarView habits={habits} />
     </div>
   );
 }
